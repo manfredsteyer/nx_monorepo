@@ -12,19 +12,19 @@
       "tags": ["app:flight-app"]
     },
     "flight-app-e2e": {
-      "tags": []
+      "tags": ["e2e"]
     },
     "flight-admin": {
       "tags": ["app:flight-admin"]
     },
     "flight-admin-e2e": {
-      "tags": []
+      "tags": ["e2e"]
     },
     "passenger-app": {
       "tags": ["app:passenger-app"]
     },
     "passenger-app-e2e": {
-      "tags": []
+      "tags": ["e2e"]
     },
     "flight-api": {
       "tags": ["lib:flights"]
