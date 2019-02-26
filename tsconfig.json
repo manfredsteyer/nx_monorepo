@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@flights/flight-api": ["libs/flight-api/src/index.ts"],
+      "@flights/common": ["libs/common/src/index.ts"],
+      "@flights/shared": ["libs/shared/src/index.ts"],
+      "@flights/passenger-api": ["libs/passenger-api/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

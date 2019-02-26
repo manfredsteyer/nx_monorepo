@@ -7,5 +7,33 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "flight-app": {
+      "tags": ["app:flight-app"]
+    },
+    "flight-app-e2e": {
+      "tags": []
+    },
+    "flight-admin": {
+      "tags": ["app:flight-admin"]
+    },
+    "flight-admin-e2e": {
+      "tags": []
+    },
+    "passenger-app": {
+      "tags": ["app:passenger-app"]
+    },
+    "passenger-app-e2e": {
+      "tags": []
+    },
+    "flight-api": {
+      "tags": ["lib:flights"]
+    },
+    "shared": {
+      "tags": ["lib:shared"]
+    },
+    "passenger-api": {
+      "tags": ["lib:passengers"]
+    }
+  }
 }
