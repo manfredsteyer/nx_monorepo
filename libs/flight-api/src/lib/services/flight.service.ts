@@ -31,17 +31,17 @@ export class FlightService {
     // let url = '/assets/data/data.json';
 
     // For online access
-    let url = [this.baseUrl, 'flight'].join('/');
+    const url = [this.baseUrl, 'flight'].join('/');
 
     if (urgent) {
       url = [this.baseUrl,'error?code=403'].join('/');
     }
 
-    let params = new HttpParams()
+    const params = new HttpParams()
       .set('from', from)
       .set('to', to);
 
-    let headers = new HttpHeaders()
+    const headers = new HttpHeaders()
       .set('Accept', 'application/json');
 
     const reqObj = {params, headers};
@@ -66,9 +66,9 @@ export class FlightService {
   delay() {
     const ONE_MINUTE = 1000 * 60;
 
-    let oldFlights = this.flights;
-    let oldFlight = oldFlights[0];
-    let oldDate = new Date(oldFlight.date);
+    const oldFlights = this.flights;
+    const oldFlight = oldFlights[0];
+    const oldDate = new Date(oldFlight.date);
 
     // Mutable
     oldDate.setTime(oldDate.getTime() + 15 * ONE_MINUTE);

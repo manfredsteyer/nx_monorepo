@@ -31,7 +31,7 @@
     "no-arg": true,
     "no-bitwise": true,
     "no-console": [
-      true,
+      false,
       "debug",
       "info",
       "time",
@@ -45,7 +45,7 @@
     "no-empty-interface": true,
     "no-eval": true,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-misused-new": true,
@@ -68,14 +68,16 @@
     "unified-signatures": true,
     "variable-name": false,
     "directive-selector": [
-      true,
+      false,
       "attribute",
       "app",
+      "flight",
       "camelCase"
     ],
     "component-selector": [
-      true,
+      false,
       "element",
+      "flight",
       "app",
       "kebab-case"
     ],

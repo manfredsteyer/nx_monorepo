@@ -24,10 +24,10 @@ export class CustomCheckboxElement extends HTMLElement {
     _clicked: EventListener;
 
     get checked() { return this._checked; }
-    set checked(value: boolean) { 
-        this._checked = value 
-        const checkbox = this.shadowRoot.querySelector('.checkbox');        
-        
+    set checked(value: boolean) {
+        this._checked = value
+        const checkbox = this.shadowRoot.querySelector('.checkbox');
+
         if (value) {
             checkbox.classList.add('checkbox-checked');
         }
@@ -38,8 +38,8 @@ export class CustomCheckboxElement extends HTMLElement {
     }
 
     get label() { return this._label; }
-    set label(value: string) { 
-        this._label = value; 
+    set label(value: string) {
+        this._label = value;
 
         const checkbox = this.shadowRoot.querySelector('.checkbox');
         checkbox.textContent = value;
@@ -58,12 +58,12 @@ export class CustomCheckboxElement extends HTMLElement {
 
 
     connectedCallback() {
-        
-        const checkbox = this.shadowRoot.querySelector('.checkbox');        
-        
+
+        const checkbox = this.shadowRoot.querySelector('.checkbox');
+
         this._clicked = () => {
             this.checked = !this.checked;
-            
+
             this.dispatchEvent(new CustomEvent('changed', { detail: this.checked}));
         };
 
@@ -71,7 +71,7 @@ export class CustomCheckboxElement extends HTMLElement {
     }
 
     disconnectedCallback() {
-        const checkbox = this.shadowRoot.querySelector('.checkbox');        
+        const checkbox = this.shadowRoot.querySelector('.checkbox');
         checkbox.removeEventListener('click', this._clicked);
     }
 
@@ -79,7 +79,7 @@ export class CustomCheckboxElement extends HTMLElement {
         if (name === 'label') {
             this.label = newValue;
         }
-        else if (name == 'checked') {
+        else if (name === 'checked') {
             this.checked = newValue;
         }
     }
