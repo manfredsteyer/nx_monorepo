@@ -10,21 +10,20 @@ import {ActivatedRoute} from '@angular/router';
 export class HomeComponent implements OnInit {
 
   expertMode: boolean = false;
+  needsLogin: boolean;
+  _userName: string = '';
 
   constructor(private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+    this.needsLogin = !!this.route.snapshot.params['needsLogin'];
   }
 
   changed($event): void {
     console.debug('$event.detail ', $event.target.detail);
 
     this.expertMode = $event.detail
-  }
-
-  needsLogin: boolean;
-  _userName: string = '';
-
-  ngOnInit() {
-    this.needsLogin = !!this.route.snapshot.params['needsLogin'];
   }
 
   get userName(): string {
