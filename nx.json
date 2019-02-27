@@ -27,13 +27,13 @@
       "tags": ["e2e"]
     },
     "flight-api": {
-      "tags": ["lib:flights"]
+      "tags": ["lib:flight-api"]
     },
     "shared": {
       "tags": ["lib:shared"]
     },
     "passenger-api": {
-      "tags": ["lib:passengers"]
+      "tags": ["lib:passenger-api"]
     }
   }
 }

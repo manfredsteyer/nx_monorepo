@@ -97,11 +97,11 @@
       {
         "allow": [],
         "depConstraints": [
-          { "sourceTag": "app:flight-app", "onlyDependOnLibsWithTags": ["lib:flights", "lib:shared"] },
-          { "sourceTag": "app:flight-admin", "onlyDependOnLibsWithTags": ["lib:flights", "lib:shared"] },
-          { "sourceTag": "app:passenger-app", "onlyDependOnLibsWithTags": ["lib:passengers", "lib:shared"] },
-          { "sourceTag": "lib:flights", "onlyDependOnLibsWithTags": ["lib:shared"] },
-          { "sourceTag": "lib:passengers", "onlyDependOnLibsWithTags": ["lib:shared"] },
+          { "sourceTag": "app:flight-app", "onlyDependOnLibsWithTags": ["lib:flight-api", "lib:shared"] },
+          { "sourceTag": "app:flight-admin", "onlyDependOnLibsWithTags": ["lib:flight-api", "lib:shared"] },
+          { "sourceTag": "app:passenger-app", "onlyDependOnLibsWithTags": ["lib:passenger-api", "lib:shared"] },
+          { "sourceTag": "lib:flight-api", "onlyDependOnLibsWithTags": ["lib:shared"] },
+          { "sourceTag": "lib:passenger-api", "onlyDependOnLibsWithTags": ["lib:shared"] },
           { "sourceTag": "lib:shared", "onlyDependOnLibsWithTags": [] },
           { "sourceTag": "e2e", "onlyDependOnLibsWithTags": ["*"] }
         ]
